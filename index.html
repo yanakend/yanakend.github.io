@@ -727,7 +727,88 @@
       .stat-number { font-size: 1.8rem; }
     }
 
-    /* Divider */
+    /* Mission */
+    .mission-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      position: relative;
+      backdrop-filter: blur(10px);
+    }
+
+    .mission-block::before {
+      content: '\201C';
+      position: absolute;
+      top: 0.5rem;
+      left: 1.5rem;
+      font-size: 4rem;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--grad-1), var(--grad-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-family: Georgia, serif;
+    }
+
+    .mission-text {
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.9;
+      padding-top: 1rem;
+    }
+
+    .mission-author {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .service-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .service-card .service-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-card p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+/* Divider */
     .divider {
       width: 100%;
       height: 1px;
@@ -809,6 +890,18 @@
       </div>
     </section>
 
+    <!-- Mission -->
+    <section class="section fade-in">
+      <div class="section-label">Mission</div>
+      <h2 class="section-title">What We Believe</h2>
+      <div class="mission-block">
+        <p class="mission-text" data-i18n data-ja="テクノロジーは、社会をもっとフェアに、もっと透明にできる。<br>AI・ブロックチェーン・モバイルの力で、一人ひとりが情報にアクセスし、自分の意思で判断・行動できる世界をつくる。" data-en="Technology can make society fairer and more transparent.<br>With AI, blockchain, and mobile, we build a world where everyone can access information and act on their own decisions.">テクノロジーは、社会をもっとフェアに、もっと透明にできる。<br>AI・ブロックチェーン・モバイルの力で、一人ひとりが情報にアクセスし、自分の意思で判断・行動できる世界をつくる。</p>
+        <div class="mission-author">— RED ONE Inc.</div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
     <!-- Stats -->
     <div class="stats fade-in">
       <div class="stat">
@@ -820,8 +913,8 @@
         <div class="stat-label" data-i18n data-ja="プロダクト開発実績" data-en="Products Delivered">プロダクト開発実績</div>
       </div>
       <div class="stat">
-        <div class="stat-number">7+</div>
-        <div class="stat-label" data-i18n data-ja="年の経営経験" data-en="Years as CEO">年の経営経験</div>
+        <div class="stat-number">10+</div>
+        <div class="stat-label" data-i18n data-ja="社の開発支援実績" data-en="Companies Supported">社の開発支援実績</div>
       </div>
     </div>
 
@@ -1022,6 +1115,65 @@
         </div>
       </div>
 
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Services -->
+    <section class="section fade-in">
+      <div class="section-label">Services</div>
+      <h2 class="section-title" data-i18n data-ja="対応可能な業務" data-en="What I Can Do">対応可能な業務</h2>
+      <p class="section-desc" data-i18n data-ja="設計から運用まで、ワンストップで対応します" data-en="End-to-end support from design to operations">設計から運用まで、ワンストップで対応します</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon icon-blue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3 data-i18n data-ja="モバイルアプリ開発" data-en="Mobile App Development">モバイルアプリ開発</h3>
+          <p data-i18n data-ja="Flutter / SwiftによるiOS・Androidアプリの設計・開発・リリース" data-en="Design, develop, and release iOS/Android apps with Flutter and Swift">Flutter / SwiftによるiOS・Androidアプリの設計・開発・リリース</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon icon-green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 data-i18n data-ja="バックエンド / API開発" data-en="Backend / API Development">バックエンド / API開発</h3>
+          <p data-i18n data-ja="Node.js / Hono / LaravelによるAPI設計・実装、DB設計、パフォーマンス最適化" data-en="API design with Node.js / Hono / Laravel, database design, and performance optimization">Node.js / Hono / LaravelによるAPI設計・実装、DB設計、パフォーマンス最適化</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon icon-orange">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3 data-i18n data-ja="クラウドインフラ構築" data-en="Cloud Infrastructure">クラウドインフラ構築</h3>
+          <p data-i18n data-ja="AWS / Supabase / Firebaseの設計・構築・運用。CDK / Terraformによるコード管理" data-en="AWS / Supabase / Firebase architecture, setup, and operations. IaC with CDK and Terraform">AWS / Supabase / Firebaseの設計・構築・運用。CDK / Terraformによるコード管理</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon icon-cyan">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/></svg>
+          </div>
+          <h3 data-i18n data-ja="AI / LLM活用" data-en="AI / LLM Integration">AI / LLM活用</h3>
+          <p data-i18n data-ja="Claude / Gemini APIを使ったAI機能の企画・実装。要約、分析、チャットボット等" data-en="Plan and implement AI features with Claude / Gemini APIs — summarization, analysis, chatbots, and more">Claude / Gemini APIを使ったAI機能の企画・実装。要約、分析、チャットボット等</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon icon-purple">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 data-i18n data-ja="Web3 / ブロックチェーン" data-en="Web3 / Blockchain">Web3 / ブロックチェーン</h3>
+          <p data-i18n data-ja="スマートコントラクト開発（Solidity）、NFT、ゼロ知識証明の設計・実装" data-en="Smart contract development (Solidity), NFTs, and zero-knowledge proof design and implementation">スマートコントラクト開発（Solidity）、NFT、ゼロ知識証明の設計・実装</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon icon-pink">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-i18n data-ja="技術顧問 / PM" data-en="Tech Advisory / PM">技術顧問 / PM</h3>
+          <p data-i18n data-ja="技術選定、アーキテクチャ設計、チームリード、プロジェクトマネジメント" data-en="Technology selection, architecture design, team leadership, and project management">技術選定、アーキテクチャ設計、チームリード、プロジェクトマネジメント</p>
+        </div>
+      </div>
     </section>
 
     <div class="divider"></div>
